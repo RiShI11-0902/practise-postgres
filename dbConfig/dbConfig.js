@@ -1,7 +1,7 @@
 const { Sequelize } = require("sequelize");
 const pg = require("pg");
-
-const sequelize = new Sequelize("postgresql://postgres: _tGTdZfS!MHP9m6@db.tnvibvsasyhesrpqynru.supabase.co:5432/postgres", {
+require('dotenv').config()
+const sequelize = new Sequelize(process.env.DB_URL, {
   dialectModule: pg,
   dialect: "postgres",
   logging: false,
