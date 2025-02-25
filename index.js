@@ -9,4 +9,7 @@ app.get("/", async (req,res)=>{
     res.json({message:"Listening on 5000"})
 })
 
-app.listen(5000)
+app.listen(5000, ()=>{
+    console.log("Listening");
+    
+})
